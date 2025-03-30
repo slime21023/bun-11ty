@@ -1,0 +1,14 @@
+{
+  "name": "create-bun-11ty",
+  "version": "1.0.0",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "dependencies": {
+    "@types/prompts": "^2.4.9",
+    "kolorist": "^1.8.0",
+    "prompts": "^2.4.2"
+  }
+}

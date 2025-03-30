@@ -1,2 +1,8 @@
-# bun-11ty
-An easy-to-use CLI tool to quickly create an Eleventy project with bun.
+# create-11ty-app
+
+A scaffold for creating 11ty projects with Bun.
+
+## Usage
+
+```bash
+bun create bun-11ty my-site
