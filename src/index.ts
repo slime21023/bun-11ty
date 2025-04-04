@@ -1,9 +1,10 @@
+#!/usr/bin/env bun
 import { argv } from "bun";
 import prompts from "prompts";
 import { blue, red, green } from "kolorist";
 import path from "path";
 import { existsSync } from "fs";
-import { mkdir, readdir } from "fs/promises";
+import { mkdir, cp } from "fs/promises";
 
 
 const TEMPLATES = [
@@ -67,15 +68,7 @@ async function init() {
 
   // 複製模板檔案
   const templateDir = path.join(import.meta.dir, "../template", template);
-  
-  // 使用 Bun 的檔案操作 API
-  const files = await readdir(templateDir);
-  
-  for (const file of files) {
-    const srcPath = path.join(templateDir, file);
-    const destPath = path.join(root, file);
-    await Bun.write(destPath, await Bun.file(srcPath).text());
-  }
+  await cp(templateDir, root, { recursive: true });
 
   // 修改 package.json
   const pkgFile = Bun.file(path.join(root, "package.json"));

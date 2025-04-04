@@ -1,7 +1,7 @@
 {
   "name": "create-bun-11ty",
   "version": "1.0.0",
-  "module": "src/index.ts",
+  "bin": "src/index.ts",
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest"

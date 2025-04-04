@@ -1,4 +1,4 @@
-# create-11ty-app
+# create-bun-11ty
 
 A scaffold for creating 11ty projects with Bun.
 
